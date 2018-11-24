@@ -1,0 +1,19 @@
+-------------------------------ORACLE ADD AUTO INCREMENT AND ADD TRIGGER----------------------------------
+
+CREATE OR REPLACE TRIGGER  BI_PRIVILEGE
+  before insert on PRIVILEGE              
+  for each row  
+begin   
+  if :NEW.PRIVILEGE_ID is null then 
+    select PRIVILEGE_SEQ.nextval into :NEW.PRIVILEGE_ID from dual; 
+  end if; 
+end; 
+
+---------------------If you're using Oracle 11G or greater then you can use this instead:-----------
+
+  if :NEW.PRIVILEGE_ID is null then 
+    :NEW.PRIVILEGE_ID := PRIVILEGE_SEQ.nextval; 
+  end if; 
+
+
+---------------------------------------END TRIGGER--------------------------------------------

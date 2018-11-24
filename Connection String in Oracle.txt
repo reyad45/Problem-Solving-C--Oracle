@@ -1,0 +1,4 @@
+<connectionStrings>
+    <add name="ProjectDbContext" providerName="Oracle.ManagedDataAccess.Client"
+      connectionString="DATA SOURCE=localhost:1521/orcl;PERSIST SECURITY INFO=True;USER ID=HR;PASSWORD=hr"/>
+  </connectionStrings>

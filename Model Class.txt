@@ -1,0 +1,16 @@
+[Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
+
+        [Required(ErrorMessage="Please Enter Account Code")]
+        [Display(Name="Account Code")]
+        public int AccountCode { get; set; }
+        [Display(Name="Account Type EN")]
+        public string AccountTypeEN { get; set; }
+        [Display(Name = "Account Type BN")]
+        public string AccountTypeBN { get; set; }
+        public string NoteNo { get; set; }
+        [Display(Name="Entry User ID")]
+        public string EntryUserID { get; set; }
+        public string EntryBy { get; set; }
+        [Display(Name="Entry Date")]
+        public DateTime EntryDate { get; set; }

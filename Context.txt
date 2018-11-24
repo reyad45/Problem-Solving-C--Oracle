@@ -1,0 +1,8 @@
+    public class ProjectDbContext : DbContext
+    {
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("HR");
+        }
+        public DbSet<SysAccountType> Countries { get; set; }
+    }
